@@ -23,12 +23,13 @@
 
 ## Links
 
-| Resource          | Link                                                                                 |
-| ----------------- | ------------------------------------------------------------------------------------ |
-| GitHub Repository | https://github.com/Albrea/Kita-Akan-Lawan-StockNow.git                               |
-| Live Demo         | https://stock-now-theta.vercel.app/                                                  |
-| Slide Deck        | https://drive.google.com/drive/folders/1M0mmQvDCoiL1j6nfZfzmWxY7rzt96_LC?usp=sharing |
-| Demo Video        | https://youtu.be/BaryfPG26D4?si=Bjmmof0Aw0uzXqWQ                                     |
+| Resource           | Link                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| GitHub Repository  | https://github.com/Albrea/Kita-Akan-Lawan-StockNow.git                               |
+| Live Demo          | https://stock-now-theta.vercel.app/                                                  |
+| Slide Deck         | https://drive.google.com/drive/folders/1M0mmQvDCoiL1j6nfZfzmWxY7rzt96_LC?usp=sharing |
+| Demo Video         | https://youtu.be/BaryfPG26D4?si=Bjmmof0Aw0uzXqWQ                                     |
+| Backup Pitch Video | [add link]                                                                           |
 
 ---
 
@@ -79,14 +80,14 @@ The numbers come from StockNow's own engine, so they are repeatable and testable
 
 ### Tech Stack
 
-| Layer         | Technology                                                                                                                                            |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Frontend      | Next.js 15 (React 19), JavaScript, plain CSS, lucide-react icons                                                                                      |
-| Backend       | Next.js API routes (Node.js); restock engine in plain JavaScript (`lib/engine.js`)                                                                    |
-| Database      | Supabase (PostgreSQL), with a built-in in-memory demo store when Supabase is not configured                                                           |
-| AI            | Google Gemini API (`gemini-3.5-flash` by default, set with `GEMINI_MODEL`; busy → `gemini-3.5-flash-lite`) for wording only, with a template fallback |
-| Hosting / Dev | Replit                                                                                                                                                |
-| Tests         | Vitest                                                                                                                                                |
+| Layer    | Technology                                                                                                                                            |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frontend | Next.js 15 (React 19), JavaScript, plain CSS, lucide-react icons                                                                                      |
+| Backend  | Next.js API routes (Node.js); restock engine in plain JavaScript (`lib/engine.js`)                                                                    |
+| Database | Supabase (PostgreSQL), with a built-in in-memory demo store when Supabase is not configured                                                           |
+| AI       | Google Gemini API (`gemini-3.5-flash` by default, set with `GEMINI_MODEL`; busy → `gemini-3.5-flash-lite`) for wording only, with a template fallback |
+| Hosting  | Vercel (final version); Replit was used for the Phase 1 prototype                                                                                     |
+| Tests    | Vitest                                                                                                                                                |
 
 ---
 
@@ -99,6 +100,8 @@ The numbers come from StockNow's own engine, so they are repeatable and testable
 │   │   ├── desktop-ai-restock.png                     # Smart Restock plan on desktop
 │   │   └── desktop-dashboard.png                      # Dashboard on desktop
 │   └── architecture.png                               # System architecture diagram
+├── public                                             # Static files served as-is
+│   └── logo.png                                       # StockNow logo (sidebar and header)
 ├── src                                                # All app source code
 │   ├── app                                            # Next.js App Router (pages + API)
 │   │   ├── api                                        # Server API routes
@@ -119,7 +122,7 @@ The numbers come from StockNow's own engine, so they are repeatable and testable
 │   │   │   └── state                                  # GET: load all shop data
 │   │   │       └── route.js                           # Returns data + storage mode + Gemini status
 │   │   ├── globals.css                                # All styles, responsive desktop + phone
-│   │   ├── icon.svg                                   # Browser tab icon
+│   │   ├── icon.png                                   # Browser tab icon (StockNow logo)
 │   │   ├── layout.js                                  # Root HTML layout, font, metadata
 │   │   └── page.js                                    # Home page, renders <App />
 │   ├── components                                     # React UI (client side)
@@ -151,10 +154,13 @@ The numbers come from StockNow's own engine, so they are repeatable and testable
 │       ├── i18n-dict.js                               # Screen text in Malay, Tamil and Chinese
 │       ├── messages.js                                # Supplier WhatsApp message templates
 │       └── seed.js                                    # Synthetic demo data (6 scenarios), moved to today
-├── submission                                         # Hackathon submission documents
-│   ├── Replit Proof of Usage.pdf                      # Proof the app runs on Replit
-│   ├── SDC 2026_Kita Akan Lawan_Preliminary.pdf       # Preliminary proposal
-│   └── SDC 2026_Kita Akan Lawan_TechDeclaration.pdf   # Technology declaration
+├── submission                                                 # Hackathon submission documents
+│   ├── Replit Proof of Usage.pdf                              # Proof Replit was used (Phase 1 prototype)
+│   ├── SDC 2026_ Kita Akan Lawan_Finalists.docx               # Finalist report (Phase 2)
+│   ├── SDC 2026_Kita Akan Lawan_Preliminary.pdf               # Preliminary proposal
+│   ├── SDC 2026_Kita Akan Lawan_TechDeclaration.pdf           # Technology declaration (preliminary)
+│   ├── SDC 2026_Kita Akan Lawan_TechDeclaration_Finalists.docx  # Technology declaration (finalist)
+│   └── StockNow_Pitch_Deck.pptx                               # Pitch deck
 ├── supabase                                           # Database setup
 │   ├── schema.sql                                     # Paste into Supabase SQL Editor: creates 11 tables
 │   └── upgrade-final.sql                              # Run once if your tables existed before the final
@@ -167,7 +173,7 @@ The numbers come from StockNow's own engine, so they are repeatable and testable
 │   └── store.test.js                                  # Tests saving and loading data
 ├── .env.local.example                                 # Template for secret keys (copy to .env.local)
 ├── .gitignore                                         # Keeps .env, node_modules, .next off GitHub
-├── .replit                                            # Replit run and deploy settings
+├── .replit                                            # Replit run settings (used for the Phase 1 prototype)
 ├── LICENSE                                            # Apache-2.0 license
 ├── README.md                                          # Project overview + how to run
 ├── jsconfig.json                                      # Path alias: @/ = src/
@@ -183,7 +189,7 @@ The numbers come from StockNow's own engine, so they are repeatable and testable
 Browser (phone / desktop)
         │  HTTPS
         ▼
-Replit ── Next.js app ── API routes ── restock engine (lib/engine.js)
+Vercel ── Next.js app ── API routes ── restock engine (lib/engine.js)
                 │                 │
                 │                 └──► Google Gemini API  (wording only; template if unavailable)
                 ▼
@@ -201,16 +207,15 @@ Orbyte Directory, eLeave, notifications and Payment are shown as integration poi
 
 StockNow runs using the built-in demo shop. Add Supabase to keep data permanently, and Gemini for AI-written text.
 
-### Option 1: Run on Replit (recommended)
+### Option 1: Deploy on Vercel (recommended)
 
-1. In Replit, choose **Create Repl → Import from GitHub** and paste this repository's URL.
-2. _(Optional)_ Open **Secrets** (🔒) and add the variables from `.env.example`:
+1. Go to [vercel.com](https://vercel.com) → **Add New → Project** → **Import** this GitHub repository. Vercel detects Next.js automatically; no extra configuration is needed.
+2. Open **Settings → Environment Variables** and add the variables from `.env.local.example`:
    - `GEMINI_API_KEY`: from [Google AI Studio](https://aistudio.google.com/apikey)
    - `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`: see _Connect Supabase_ below
-3. Click **Run**. Replit uses `.replit` to run `npm install && npm run dev`, and the app opens in the Webview on port 3000.
-4. To publish, open **Deploy → Autoscale**. Replit builds with `npm run build` and starts with `npm run start`.
+3. Click **Deploy**. Vercel builds with `npm run build` and gives you a public URL. Every push to the main branch redeploys automatically.
 
-> Without Supabase, the demo data lives in server memory and resets when the Repl restarts or scales. Connect Supabase for a deployment that keeps its data.
+> On Vercel, connect Supabase. Without it, the demo data lives in server memory, which Vercel does not keep between requests or restarts, so changes can disappear.
 
 ### Option 2: Run locally
 
@@ -225,7 +230,7 @@ cd stocknow
 npm install
 
 # 3. (Optional) Configure environment variables
-cp .env.example .env.local      # then fill in your keys
+cp .env.local.example .env.local      # then fill in your keys
 
 # 4. Start the app
 npm run dev                     # open http://localhost:3000
@@ -292,7 +297,7 @@ StockNow never moves money: it only reacts to the fact that a payment happened.
 
 ### Setup guide
 
-**Dependencies.** Only Node.js is needed (version 20 or newer; Replit uses Node.js 22). `npm install` installs everything listed in `package.json`; nothing has to be installed one by one:
+**Dependencies.** Only Node.js is needed (version 20 or newer; on Vercel, choose it in **Settings → General → Node.js Version**). `npm install` installs everything listed in `package.json`; nothing has to be installed one by one:
 
 | Package                 | Version | Used for                           |
 | ----------------------- | ------- | ---------------------------------- |
@@ -308,27 +313,15 @@ StockNow never moves money: it only reacts to the fact that a payment happened.
 
 **Gemini model.** The default is `gemini-3.5-flash`. Set `GEMINI_MODEL` to use another one. If the chosen model is overloaded, slow (12 s) or unavailable, StockNow automatically tries `gemini-3.5-flash`, then `gemini-3.5-flash-lite` (change the list with `GEMINI_FALLBACK_MODELS`). In our test on 31 Oct 2026, `gemini-3.8-flash` returned no text within 30 s and reported "high demand", while `gemini-3.5-flash` answered in 1–8 s and `gemini-3.5-flash-lite` in under 1 s. The label on each AI text shows, on hover, which model wrote it.
 
-**Check that Gemini works.** Open **Settings → AI (Gemini) → Test Gemini**. It makes one small call from the server and shows the model and the answer time, or Google's exact error (for example an invalid key or an unknown model). When Gemini writes a text, its label says **Written by Gemini**. If the built-in template is used instead, the label says why: _Gemini not set up_ (no `GEMINI_API_KEY` on the server), _Gemini didn't answer_ (error or timeout, after one retry), or _Gemini's numbers didn't match_ (its reply used a number StockNow didn't calculate). After changing a key in Replit Secrets, redeploy so the server picks it up.
+**Check that Gemini works.** Open **Settings → AI (Gemini) → Test Gemini**. It makes one small call from the server and shows the model and the answer time, or Google's exact error (for example an invalid key or an unknown model). When Gemini writes a text, its label says **Written by Gemini**. If the built-in template is used instead, the label says why: _Gemini not set up_ (no `GEMINI_API_KEY` on the server), _Gemini didn't answer_ (error or timeout, after one retry), or _Gemini's numbers didn't match_ (its reply used a number StockNow didn't calculate). After changing a key in Vercel's Environment Variables, redeploy (Deployments → ⋯ → **Redeploy**) so the server picks it up.
 
-**The `.replit` file.** Replit reads it automatically; you don't run it yourself.
-
-| Line                                 | What it does                                                                      |
-| ------------------------------------ | --------------------------------------------------------------------------------- |
-| `modules = ["nodejs-20", "web"]`     | Gives the Repl Node.js 20                                                         |
-| `run = "npm install && npm run dev"` | What the **Run** button does: install packages, start the dev server on port 3000 |
-| `[deployment] build`                 | What **Deploy** runs first: `npm ci && npm run build`                             |
-| `[deployment] run`                   | How the deployed app starts: `npm run start`                                      |
-| `deploymentTarget = "autoscale"`     | Deployment type (scales to zero when idle)                                        |
-| `[[ports]] 3000 → 80`                | Makes the app reachable on the public URL                                         |
-
-**Deploy to Replit, step by step.**
+**Deploy to Vercel, step by step.**
 
 1. Push this project to GitHub.
-2. Replit → **Import → Choose 'GitHub'** → choose the repository. Replit detects `.replit`.
-3. **Tools → Secrets**: add `GEMINI_API_KEY`, `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` (and `GEMINI_MODEL` if you want a different model). `ORBYTE_WEBHOOK_SECRET` is only needed to receive real Orbyte Payment events.
-4. Press **Publish** and check the Webview.
-5. Enter your project name and wait for the configurations.
-6. Click on the **url** and your project is already deployed.
+2. Vercel → **Add New → Project** → choose the repository → **Import**. Vercel detects Next.js; leave the build settings as they are.
+3. **Settings → Environment Variables**: add `GEMINI_API_KEY`, `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` (and `GEMINI_MODEL` if you want a different model). `ORBYTE_WEBHOOK_SECRET` is only needed to receive real Orbyte Payment events.
+4. Click **Deploy** and wait for the build to finish.
+5. Open the URL Vercel gives you; your project is live. Later pushes to the main branch redeploy automatically.
 
 **Check the versions you are using.**
 
@@ -345,9 +338,9 @@ npm ls next react react-dom lucide-react @supabase/supabase-js vitest
 
 ## How We Use Replit _(Required)_
 
-- **First Phase:** Used Replit for initial version of prototype and brainstorming before switching to another AI model to make the finalize version.
-- **Hosting:** The app is deployed with Replit Deployments at the Live Demo link above. `.replit` defines the run command for development (`npm run dev`) and the build/start commands for the deployment.
-- **Secrets:** `GEMINI_API_KEY`, `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` are stored in Replit Secrets, never in the code or the repository.
+- **First Phase:** Used Replit (Replit Agent and Replit Deployments) for the initial version of the prototype and for brainstorming, before switching to another AI model to make the final version.
+- **Hosting:** The Phase 1 prototype was deployed with Replit Deployments, using the run and build commands in `.replit`. Publishing on Replit became slow, so the final version is deployed on **Vercel** at the Live Demo link above. StockNow is a standard Next.js app, so the move only needed the same environment variables on Vercel.
+- **Secrets:** `GEMINI_API_KEY`, `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` were stored in Replit Secrets in Phase 1 and are now stored as Vercel Environment Variables, never in the code or the repository.
 
 📄 Proof of use:
 [`submission/Replit Proof of Usage.pdf`]
@@ -384,9 +377,12 @@ npm ls next react react-dom lucide-react @supabase/supabase-js vitest
 - [x] Team name, domain (Domain 2) and SDG track filled in
 - [x] Slide deck link added
 - [x] Demo video link added
-- [x] Replit used, with proof of use in `submission/Replit Proof of Usage.pdf`
+- [x] Replit used (Phase 1 prototype), with proof of use in `submission/Replit Proof of Usage.pdf`
+- [x] Final version deployed on Vercel (Live Demo link above)
 - [x] Preliminary submission completed (`SDC 2026_Kita Akan Lawan_Preliminary.pdf`)
-- [x] Technology declaration completed (`SDC 2026_Kita Akan Lawan_TechDeclaration.pdf`)
+- [x] Finalist report completed (`SDC 2026_ Kita Akan Lawan_Finalists.docx`)
+- [x] Technology declaration completed (`SDC 2026_Kita Akan Lawan_TechDeclaration.pdf`, finalist version `SDC 2026_Kita Akan Lawan_TechDeclaration_Finalists.docx`)
+- [x] Pitch deck added (`StockNow_Pitch_Deck.pptx`)
 - [x] Submission files renamed with the team name
 - [x] "How to Run" steps verified
 - [x] No API keys or secrets committed to the repository
