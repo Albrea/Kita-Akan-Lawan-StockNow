@@ -243,7 +243,6 @@ Production build: `npm run build` then `npm run start`.
 2. Open **SQL Editor**, paste the contents of [`supabase/schema.sql`](supabase/schema.sql), and run it.
 3. Go to **Project Settings → API**. Copy the **Project URL** into `SUPABASE_URL` and the **service_role** key into `SUPABASE_SERVICE_ROLE_KEY`.
 4. Restart the app. On first start it fills the empty tables with the demo shop. Settings → Backup then shows **Supabase connected**.
-5. **Already created the tables before the final-round update?** Run [`supabase/upgrade-final.sql`](supabase/upgrade-final.sql) once in the SQL Editor. It allows the new "Orbyte payment needs a check" alert and adds 3 settings columns (business type, years in business, approved forecast settings). Your existing data is not changed. **Run it before deploying this version**, or saving will fail. To move an older demo shop to today's dates, pick any scenario in **Settings → Demo data**.
 
 The service_role key is only used on the server (API routes). The browser never talks to Supabase, and row-level security is on, so the public anon key can read nothing.
 
