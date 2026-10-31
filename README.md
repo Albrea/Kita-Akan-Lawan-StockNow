@@ -155,10 +155,10 @@ The numbers come from StockNow's own engine, so they are repeatable and testable
 │       └── seed.js                                    # Synthetic demo data (6 scenarios), moved to today
 ├── submission                                                 # Hackathon submission documents
 │   ├── Replit Proof of Usage.pdf                              # Proof Replit was used (Phase 1 prototype)
-│   ├── SDC 2026_ Kita Akan Lawan_Finalists.docx               # Finalist report (Phase 2)
+│   ├── SDC 2026_ Kita Akan Lawan_Finalists.pdf               # Finalist report (Phase 2)
 │   ├── SDC 2026_Kita Akan Lawan_Preliminary.pdf               # Preliminary proposal
 │   ├── SDC 2026_Kita Akan Lawan_TechDeclaration.pdf           # Technology declaration (preliminary)
-│   ├── SDC 2026_Kita Akan Lawan_TechDeclaration_Finalists.docx  # Technology declaration (finalist)
+│   ├── SDC 2026_Kita Akan Lawan_TechDeclaration_Finalists.pdf  # Technology declaration (finalist)
 │   └── StockNow_Pitch_Deck.pptx                               # Pitch deck
 ├── supabase                                           # Database setup
 │   ├── schema.sql                                     # Paste into Supabase SQL Editor: creates 11 tables
