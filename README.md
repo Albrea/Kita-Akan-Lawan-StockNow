@@ -23,12 +23,12 @@
 
 ## Links
 
-| Resource           | Link                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| GitHub Repository  | https://github.com/Albrea/Kita-Akan-Lawan-StockNow.git                               |
-| Live Demo (Replit) | https://stocknow-topaz.vercel.app/                                                   |
-| Slide Deck         | https://drive.google.com/drive/folders/1M0mmQvDCoiL1j6nfZfzmWxY7rzt96_LC?usp=sharing |
-| Demo Video         | https://youtu.be/BaryfPG26D4?si=Bjmmof0Aw0uzXqWQ                                     |
+| Resource          | Link                                                                                 |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| GitHub Repository | https://github.com/Albrea/Kita-Akan-Lawan-StockNow.git                               |
+| Live Demo         | https://stocknow-topaz.vercel.app/                                                   |
+| Slide Deck        | https://drive.google.com/drive/folders/1M0mmQvDCoiL1j6nfZfzmWxY7rzt96_LC?usp=sharing |
+| Demo Video        | https://youtu.be/BaryfPG26D4?si=Bjmmof0Aw0uzXqWQ                                     |
 
 ---
 
