@@ -23,13 +23,12 @@
 
 ## Links
 
-| Resource           | Link                                                                                 |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| GitHub Repository  | https://github.com/Albrea/Kita-Akan-Lawan-StockNow.git                               |
-| Live Demo          | https://stock-now-theta.vercel.app/                                                  |
-| Slide Deck         | https://drive.google.com/drive/folders/1M0mmQvDCoiL1j6nfZfzmWxY7rzt96_LC?usp=sharing |
-| Demo Video         | https://youtu.be/BaryfPG26D4?si=Bjmmof0Aw0uzXqWQ                                     |
-| Backup Pitch Video | [add link]                                                                           |
+| Resource                 | Link                                                                                 |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| GitHub Repository        | https://github.com/Albrea/Kita-Akan-Lawan-StockNow.git                               |
+| Live Demo (finalist)     | https://stock-now-theta.vercel.app/                                                  |
+| Slide Deck               | https://drive.google.com/drive/folders/1UNfFCclnyyVvJaoxc5OhDg_BCEXeUX3U?usp=sharing |
+| Demo Video (preliminary) | https://youtu.be/BaryfPG26D4?si=Bjmmof0Aw0uzXqWQ                                     |
 
 ---
 
@@ -199,7 +198,7 @@ Supplier messages open in WhatsApp (wa.me link); a person sends them.
 Orbyte Directory, eLeave, notifications and Payment are shown as integration points (simulated in the demo).
 ```
 
-![StockNow system block diagram](docs/architecture.png)
+![StockNow system block diagram](docs/architecture.jpg)
 
 ---
 
